@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>FMBYS.SYS</title>
+    <link href="../styles/main.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@700&family=IBM+Plex+Sans:wght@300;400;700&family=Libre+Barcode+39+Text&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <h1>Femboys . Systems</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper flow" style="padding: 0px;">
+            <video width="95%" height="auto" style="padding: 5px;" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+              </video> 
+              <p>There are Captions</p>
+        </div>
+    </main>
+</body>
+<script>
+    $(document).ready(function () {
+        let scramble = setInterval(function () {
+            $(".fileButton").text(makeid(5))
+        }, 30);
+
+        setTimeout(
+            function () {
+                clearInterval(scramble);
+                $(".fileButton").text("Files");
+                setInterval(function () {
+                    $(".fileButton").text(flip());
+                }, 200);
+            }, 1200);
+    });
+</script>
+
+</html>
